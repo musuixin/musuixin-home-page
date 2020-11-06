@@ -1,17 +1,13 @@
 <template>
     <el-collapse-transition>
-        <div v-show="isShow">
-            {{hours}}:{{minutes}}:{{seconds}}
-
-        </div>
-
+        <div v-show="isShow" v-text="hours+':'+minutes+':'+seconds"/>
     </el-collapse-transition>
 </template>
 
 <script>
     export default {
         name: "Time",
-        created() {
+        mounted() {
             setInterval(() => {
                 var date = new Date();
                 this.h = date.getHours();
