@@ -25,7 +25,7 @@
                 return this.min
             },
             seconds: function () {
-                if (this.sec + 1 < 10) {
+                if (this.sec  < 10) {
                     return '0' + this.sec
                 }
                 return this.sec
