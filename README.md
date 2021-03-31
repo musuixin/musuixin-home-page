@@ -6,4 +6,4 @@
 无后端，单纯的前端静态页面，使用vue及其生态，部署使用nginx
 
 ## 部署地址
-https://www.musuixin.cn
+https://www.musuixin.top
