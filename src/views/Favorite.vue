@@ -3,7 +3,7 @@
         <div v-show="isShow">
             <el-image
                     class="img"
-                    src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1604078007007&di=5eab0305f854d5ebe988266e10560640&imgtype=0&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D2591627440%2C2371609101%26fm%3D214%26gp%3D0.jpg"
+                    src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3313663917,2958326915&fm=26&gp=0.jpg"
                     @click.native="opUrl('https://blog.csdn.net/qq_36618531?spm=1011.2124.3001.5113')"
 
             />
@@ -29,13 +29,15 @@
             <el-image
                     class="img"
                     src="/项目.JPG"
-                    @click="opUrl('http://www.musuixin.top/')"
+                    @click="opUrl('http://project.musuixin.top/')"
             />
         </div>
     </el-collapse-transition>
 </template>
 、
 <script>
+    import axios from 'axios'
+
     export default {
         name: "Favorite",
         data() {
@@ -57,11 +59,11 @@
 <style scoped>
     .img {
         cursor: pointer;
-        margin-top: 15%;
+        margin-top: 8%;
         margin-right: 30px;
         margin-left: 30px;
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border-radius: 10px;
         transition: all 1s;
     }

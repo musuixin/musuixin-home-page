@@ -15,7 +15,6 @@
                 this.sec = date.getSeconds();
                 this.isShow = true
             }, 1000)
-
         },
         computed: {
             minutes: function () {

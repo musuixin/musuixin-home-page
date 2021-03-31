@@ -12,7 +12,7 @@
             <h2>随心起始页</h2>
             <el-autocomplete
                     ref="frame"
-                    :style="'width:'+side+';transition:width 2s;'"
+                    :style="'width:'+side+';transition:width 2s;vertical-align: -0.15em;'"
                     class="inline-input"
                     v-model="content"
                     :fetch-suggestions="querySearch"
@@ -111,10 +111,11 @@
 <style scoped>
     .inline-input {
         width: 100%;
+
     }
 
     h2 {
-        font-family: "Microsoft YaHei";
+        font-family: "Microsoft YaHei",serif;
         color: white;
     }
 

@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" ref="app" :style="'width'+':'+width+'px'">
         <el-container>
             <el-header>
                 <el-row>
@@ -13,7 +13,7 @@
                     <el-col :offset="6" :span="12">
                         <Search/>
                     </el-col>
-                    <el-col :offset="6" :span="12">
+                    <el-col :offset="2" :span="20">
                         <Favorite/>
                     </el-col>
                 </el-row>
@@ -24,6 +24,7 @@
         </el-container>
     </div>
 </template>
+
 
 <style lang="scss">
     body {
@@ -37,7 +38,7 @@
         height: 100%;
         background-size: 100% 100%;
         text-align: center;
-        background-image: url("assets/bg.jpg");
+        background-image: url("assets/bg.png");
         transition: width 1s;
     }
 </style>
@@ -47,6 +48,24 @@
     import Favorite from "@/views/Favorite";
 
     export default {
-        components: {Favorite, Search, Time}
+        components: {Favorite, Search, Time},
+        mounted() {
+            // if (document.documentElement.clientWidth <1862) {
+            //     this.width=1862
+            // }
+            // window.onresize = () => {
+            //     this.width = document.documentElement.clientWidth
+            // }
+        },
+        watch: {
+            // width: function (value, old) {
+            //     alert(value)
+            // }
+        },
+        data() {
+            return {
+                width: document.documentElement.clientWidth
+            }
+        }
     }
 </script>
